@@ -4,6 +4,7 @@ import contactAbout from "@/assets/contact_me.svg";
 import { useState } from "react";
 import { Divider, Popup } from "@nutui/nutui-react";
 import "@nutui/nutui-react/dist/style.css";
+import cn from "@/assets/CN.svg";
 import "./App.css";
 
 export default function App() {
@@ -15,6 +16,17 @@ export default function App() {
       <div className="header">
         <p>SGS IS THE RECOGNIZED GLOBAL</p>
         <p>BENCHMARK FOR QUALITY & INTEGRITY</p>
+        <img
+          style={{
+            position: "absolute",
+            right: "0.9rem",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: "1.2rem",
+            cursor: "pointer",
+          }}
+          src={cn}
+        ></img>
       </div>
       <Flex flex={1}>
         <embed

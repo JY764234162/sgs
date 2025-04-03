@@ -32,6 +32,7 @@ body {
 .header {
   height: 2.2rem;
   background-color: #ff6600;
+  position: relative;
 }
 .header p {
   margin: 0;

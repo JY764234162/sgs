@@ -1,16 +1,36 @@
 import { Flex } from "antd";
 import svgAbout from "@/assets/about_sgs.svg";
 import contactAbout from "@/assets/contact_me.svg";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Divider, Popup } from "@nutui/nutui-react";
 import "@nutui/nutui-react/dist/style.css";
 import cn from "@/assets/CN.svg";
 import "./App.css";
+import { useParams } from "react-router-dom";
 
 export default function App() {
+  const { id } = useParams();
+
   const [showIcon, setShowIcon] = useState(false);
-  const originPath =
-    location.origin + location.pathname + "pdfjs-5.1.91-dist/web/viewer.html";
+
+  const originPath = useMemo(() => {
+    let path = "/pdfjs-5.1.91-dist/web/viewer.html";
+    switch (id) {
+      case "4d7e2eec-5f2f-4360-b7d2-a105dab40486":
+        path =
+          "/pdfjs-5.1.91-dist/web/viewer.html?file=TJINSCS2500255_TJIN2502000700ML01_EN.pdf";
+        break;
+      case "/13155b72-8866-4ccd-b286-d57ec07d81cf":
+        path =
+          "/pdfjs-5.1.91-dist/web/viewer.html?file=TJINSCS2500364_TJIN2503001043ML01_EN.pdf";
+        break;
+      default:
+        path = "/pdfjs-5.1.91-dist/web/viewer.html";
+        break;
+    }
+    return path;
+  }, [id]);
+
   return (
     <Flex vertical style={{ height: "100vh" }}>
       <div className="header">

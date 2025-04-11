@@ -25,7 +25,8 @@ export default function App() {
           "/pdfjs-5.1.91-legacy-dist/web/viewer.html?file=TJINSCS2500364_TJIN2503001043ML01_EN.pdf";
         break;
       default:
-        path = "/pdfjs-5.1.91-legacy-dist/web/viewer.html";
+        path =
+          "/pdfjs-5.1.91-legacy-dist/web/viewer.html?file=TJINSCS2500255_TJIN2502000700ML01_EN.pdf";
         break;
     }
     return path;

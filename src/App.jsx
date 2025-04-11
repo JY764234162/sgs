@@ -20,7 +20,7 @@ export default function App() {
         path =
           "/pdfjs-5.1.91-legacy-dist/web/viewer.html?file=TJINSCS2500255_TJIN2502000700ML01_EN.pdf";
         break;
-      case "/13155b72-8866-4ccd-b286-d57ec07d81cf":
+      case "13155b72-8866-4ccd-b286-d57ec07d81cf":
         path =
           "/pdfjs-5.1.91-legacy-dist/web/viewer.html?file=TJINSCS2500364_TJIN2503001043ML01_EN.pdf";
         break;
